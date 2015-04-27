@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/avinashd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://avinash.dwarapu.me
+  * I am avinashd (https://keybase.io/avinashd) on keybase.
+  * I have a public key with fingerprint 6884 983F 906E 71B0 2C5B  0C5F 668E 3AF6 F8A0 E0A4
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.7"
+        },
+        "key": {
+            "fingerprint": "6884983f906e71b02c5b0c5f668e3af6f8a0e0a4",
+            "host": "keybase.io",
+            "key_id": "668E3AF6F8A0E0A4",
+            "uid": "fc9ed85f0424cd6c972cd018bfeb9719",
+            "username": "avinashd"
+        },
+        "merkle_root": {
+            "ctime": 1430101977,
+            "hash": "ef8af5e7dead5a62c6f7f56f11189292d1804c8d370bd39b732560d2ddbfc9cb40788c172e387099f2eec466254218978d76fc5731918a5ece187cf4fe60b6fa",
+            "seqno": 211139
+        },
+        "service": {
+            "hostname": "avinash.dwarapu.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1430102031,
+    "expire_in": 157680000,
+    "prev": "b84c66529264fe71164440f7ec638394119d02ec0d170e95264c78eae2987d88",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFVkn9oVlUYx9+5mbMyE9xfJrhLxMrxes69554fL8451hz9kSkhCxm+3nvOc973
+bu/ufXffu+nrGIhSIRIqQqAlThSCJYhNDdGaIfTDEhmyohoZoeSYDAIhIq3OHYva
++eueez7n+3y/z3MOL6vN1Nc8uvb07L0rL87UfD3tZ7a1jCwfsvxIVa3ckCVLAYRJ
++hV6fWDlrF6o+l4FskG0JowUZHsqa+aZZmsQ4koQhYZCWZZl1nBziqeXdRAWIC7H
+QaplUc6J4I4WiALDPrKl6yPpako5OJ6mmnsIkEeMZDGqJAuqWnOa+UClOpR3OG2b
+6CbehjpQW8oPzB1oKUBxVyNiE6moFMyWCmHua/AFwyIFKxDPR/IGg9CrFFXqtw/i
+3hLk4yiaCy2TIEUwcRBGWDBmHBnUXAJjUrvAFHjK9agtqWbapRpjzIUtbIU5IpIr
+hyFfOcJnju1SpGylfONO+gQxziVmNjicISG0DSAJpbZLbKPAuGJUS5c5WGDuuSAB
+cyY10UCRT7VnIlSgP4ysnG1KOmI43ceDgYTUd9q2hemyapcXe+WBrPnZbJXjKIlk
+VDLnxSQp59LoSbUM1ljO2gV+fl4q7wehMqP7/2yxQRe0xUYObrZgdzmIIR+khMso
+R2aldWDQ1PA5kZS6pi3UBGAYU0II0gwkdbgjCMZCIRskUpghEK7BJOPggS04U5z/
+F9YMIPEKRrISFEIvGYjBGj5Q81xdpqY+88TiRenjzTy59Nl/X7S/rz4zMja6pPVw
+x6pjtVve273X//THnT2NhcfPrNzT1N29/v2H43r46mR5cu/fXRtfG5r9vX/H9tHs
+rd+64+rdvzas2zNdd2B87PaNumVnwo+7Hp1dlFvX37D/1aZDE6XRO0dXlR6QsYvh
+/e+23uvZsnP92tUtx99c8eHBqYd9Szq/OLr5qW0bJx8cCxo7R9p/vcpmMq1vnDhS
+PfNVZH02deObxXdf8X54uenahusvnbs58Af0tnceabg/tOLL7MUZtfV6w59vNU6d
+PN02PkHv/Nw3+9Pm7fvY82/Xni/gX0oX8Cet0+0Tq0+NLP/o9dOnDp44fvnSSfz4
+0rlbpNPqWNryTvGFQ5+/e37/jm8/+H5lV/Ef
+=e9hq
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/avinashd
+
+==================================================================
