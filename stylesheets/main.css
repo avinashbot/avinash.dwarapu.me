@@ -1,0 +1,66 @@
+body {
+  font-size: 18px;
+  font-family: "Abel", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 640px) {
+  .container {
+    margin: 10% 0 0 10%;
+  }
+}
+
+.info {
+  padding: 30px;
+  border-top: 5px solid #2ECC40;
+  background-color: #dcdcdc;
+}
+
+h1, h2, .email {
+  margin: 15px 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+.email {
+  font-size: 1.2em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed #222;
+}
+
+.links {
+  padding: 20px 0 0 20px;
+}
+
+.links ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.links ul li {
+  display: inline-block;
+  padding: 10px 5px;
+  color: #333;
+}
+
+.links ul li.title {
+  font-weight: bolder;
+}
+
+@media (min-width: 640px) {
+  .links ul li.title {
+    text-align: right;
+    min-width: 80px;
+  }
+}
