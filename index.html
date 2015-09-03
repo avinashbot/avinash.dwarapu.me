@@ -34,7 +34,6 @@
         <ul>
           <li class="title">projects</li>
           <li><a href="https://github.com/avidw/redd">redd</a></li>
-          <li><a href="https://github.com/avidw/bnfk">bnfk</a></li>
         </ul>
         <ul>
           <li class="title">languages</li>
@@ -57,7 +56,51 @@
       </div>
     </div>
 
-    <script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://schema.org/",
+          "projects": {
+            "@reverse": "author"
+          }
+        },
+        "@type": "Person",
+        "@id": "https://avinash.dwarapu.me",
+        "url": "https://avinash.dwarapu.me",
+        "email": "avinash@dwarapu.me",
+        "givenName": "Avinash",
+        "familyName": "Dwarapu",
+        "memberOf": {
+          "@type": "ProgramMembership",
+          "programName": "Computer Science",
+          "url": "https://cs.york.ac.uk/"
+          "hostingOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of York",
+            "url": "https://www.york.ac.uk/"
+          }
+        },
+        "projects": [
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "Redd",
+            "codeRepository": "https://github.com/avidw/redd",
+            "programmingLanguage": {
+              "@type": "Language",
+              "name": "Ruby"
+            }
+          }
+        ],
+        "sameAs": [
+          "https://github.com/avidw",
+          "https://facebook.com/avinash.dwarapu",
+          "https://www.reddit.com/user/Mustermind",
+          "https://steamcommunity.com/id/avinashd",
+          "https://keybase.io/avinashd"
+        ]
+      }
+    </script>
+    <script type="text/javascript">
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
