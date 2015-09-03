@@ -59,10 +59,7 @@
     <script type="application/ld+json">
       {
         "@context": {
-          "@vocab": "http://schema.org/",
-          "projects": {
-            "@reverse": "author"
-          }
+          "@vocab": "http://schema.org/"
         },
         "@type": "Person",
         "@id": "https://avinash.dwarapu.me",
@@ -80,17 +77,19 @@
             "url": "https://www.york.ac.uk/"
           }
         },
-        "projects": [
-          {
-            "@type": "SoftwareSourceCode",
-            "name": "Redd",
-            "codeRepository": "https://github.com/avidw/redd",
-            "programmingLanguage": {
-              "@type": "Language",
-              "name": "Ruby"
+        "@reverse": {
+          "author": [
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "Redd",
+              "codeRepository": "https://github.com/avidw/redd",
+              "programmingLanguage": {
+                "@type": "Language",
+                "name": "Ruby"
+              }
             }
-          }
-        ],
+          ]
+        },
         "sameAs": [
           "https://github.com/avidw",
           "https://facebook.com/avinash.dwarapu",
