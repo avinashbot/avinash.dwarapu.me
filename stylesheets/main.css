@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+  min-width: 200px;
   background-color: #ED6A5A;
   font-family: "Arimo", Tahoma, sans-serif;
   color: #333;
@@ -105,7 +106,7 @@ a {
 }
 
 
-@media (min-width: 960px) {
+@media screen and (min-width: 960px) and (min-height: 240px) {
   .hider {
     display: block;
     position: absolute;
