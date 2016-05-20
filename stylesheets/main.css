@@ -6,7 +6,7 @@ html, body {
 
 body {
   background-color: #ED6A5A;
-  font-family: "Arimo";
+  font-family: "Arimo", Tahoma, sans-serif;
   color: #333;
 }
 
@@ -24,7 +24,7 @@ a {
 
 .card__contents {
   padding: 20px;
-  font-family: "Roboto";
+  font-family: "Roboto", Tahoma, sans-serif;
 }
 
 .card__contents h1 {
@@ -48,15 +48,11 @@ a {
 
 .outside section {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 30px;
   padding: 20px 0;
-  width: 150px;
+  min-width: 125px;
   vertical-align: top;
   text-align: left;
-}
-
-.outside section .accent {
-  color: #555;
 }
 
 .outside section h2 {
@@ -73,6 +69,7 @@ a {
 }
 
 .outside section li::after {
+  font-weight: bolder;
   content: ",";
 }
 
@@ -84,7 +81,7 @@ a {
   text-align: center;
 }
 
-/* Responsive Styles */
+/* Responsive Styles: Mobile-only */
 
 .hider, .card__more {
   display: none;
@@ -99,11 +96,14 @@ a {
   color: rgba(0,0,0,0);
 }
 
+/* Responsive Styles: Desktop */
+
 @media (min-width: 640px) {
   .mobile-separator {
     display: none;
   }
 }
+
 
 @media (min-width: 960px) {
   .hider {
@@ -119,7 +119,7 @@ a {
     position: absolute;
     top: 20%; left: 10%; width: 400px; height: 250px;
 
-    z-index: 2;
+    z-index: 3;
   }
 
   .card__more {
@@ -131,7 +131,7 @@ a {
     position: absolute;
     top: 20%; left: 10%; right: 0; bottom: 0;
 
-    margin-left: 410px; /* 400px being the card width */
+    margin-left: 400px; /* 400px being the card width */
     text-align: left;
     z-index: 0;
   }
