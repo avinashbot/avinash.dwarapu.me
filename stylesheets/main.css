@@ -1,35 +1,13 @@
+/* Global Styles (should probably belong in normalize.css?) */
+
+html, body {
+  height: 100%;
+}
+
 body {
-  font-size: 18px;
-  font-family: "Abel", Helvetica, Arial, sans-serif;
-}
-
-@media (min-width: 640px) {
-  .container {
-    margin: 10% 0 0 10%;
-  }
-}
-
-.info {
-  padding: 30px;
-  border-top: 5px solid #2ECC40;
-  background-color: #dcdcdc;
-}
-
-h1, h2, .email {
-  margin: 15px 0;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-h2 {
-  font-size: 1.5em;
-  font-weight: lighter;
-}
-
-.email {
-  font-size: 1.2em;
+  background-color: #ED6A5A;
+  font-family: "Arimo";
+  color: #333;
 }
 
 a {
@@ -38,29 +16,127 @@ a {
   border-bottom: 1px dashed #222;
 }
 
-.links {
+/* General Styles */
+
+.hider, .card {
+  background-color: #E6EBE0;
+}
+
+.card__contents {
   padding: 20px;
+  font-family: "Roboto";
 }
 
-.links ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.card__contents h1, .card__contents h3 {
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
-.links ul li {
+.outside {
+  text-align: center;
+}
+
+.outside section {
   display: inline-block;
-  padding: 10px 5px;
-  color: #333;
+  margin-left: 20px;
+  padding: 20px 0;
+  width: 150px;
+  vertical-align: top;
+  text-align: left;
 }
 
-.links ul li.title {
-  font-weight: bolder;
+.outside section .accent {
+  color: #555;
+}
+
+.outside section h2 {
+  margin: 0;
+}
+
+.outside section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.outside section li {
+  margin-bottom: 10px;
+}
+
+.outside section li::after {
+  content: ",";
+}
+
+.outside section li:last-of-type::after {
+  content: "";
+}
+
+.easter {
+  text-align: center;
+}
+
+/* Responsive Styles */
+
+.hider, .card__more {
+  display: none;
+}
+
+.mobile-separator {
+  display: block;
+}
+
+.easter {
+  color: rgba(0,0,0,0);
 }
 
 @media (min-width: 640px) {
-  .links ul li.title {
+  .mobile-separator {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .hider {
+    display: block;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+
+    box-shadow: 0 10px 6px -6px #444;
+    z-index: 1;
+  }
+
+  .card {
+    position: absolute;
+    top: 20%; left: 10%; width: 400px; height: 230px;
+
+    z-index: 2;
+  }
+
+  .card__more {
+    display: inline;
+    color: #0074D9;
+  }
+
+  .outside {
+    position: absolute;
+    top: 20%; left: 10%; right: 0; bottom: 0;
+
+    margin-left: 410px; /* 400px being the card width */
+    text-align: left;
+    z-index: 0;
+  }
+
+  .outside section {
+    border-top: 2px solid #eee;
+  }
+
+  .easter {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
     text-align: right;
-    min-width: 80px;
+    font-style: italic;
+    font-weight: bolder;
+
+    z-index: 2;
   }
 }
