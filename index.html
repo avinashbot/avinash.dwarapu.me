@@ -66,18 +66,19 @@
       <div class="card__contents">
         <h1>Avinash Dwarapu</h1>
         <h3>
-          Studying Computer Science at the
-          <a href="https://york.ac.uk">University of York</a>.
+          <a href="https://cs.york.ac.uk">Student</a>.
+          <a href="https://github.com/avinashbot">Coder</a>.
+          <a href="#" class="minimalist" onclick="reveal();return false;">Minimalist</a>.
         </h3>
 
         <p>
-          <strong>@</strong> <a href="#">avinash&#64;dwarapu&#46;me</a><br>
+          <strong>@</strong> <a href="mailto:avinash@dwarapu.me">
+            avinash&#64;dwarapu&#46;me
+          </a><br>
           <strong>🔑</strong> <a href="https://keybase.io/avinashd/key.asc">
             <code>668E 3AF6 F8A0 E0A4</code>
           </a>
         </p>
-
-        <p><a href="#" class="card__more" onclick="reveal();return false;">projects &amp; more</a></p>
       </div>
     </div>
 
@@ -123,13 +124,15 @@
     <footer class="easter">It's "avinashd" on Steam!</footer>
 
     <script>
-      function reveal() {
-        if ($(window).width() < 960) return;
-        $('.hider').animate({ top: '20%', left: '10%', width: 400, height: 250 }, 1000);
-        $('.card__more').animate({ opacity: 0 }, 500, function() {
-          $(this).css({ display: 'none' });
-        });
-      }
+      (function() {
+        var revealed = false;
+        window.reveal = function() {
+          if (revealed || $(window).width() < 960) return;
+          $('.hider').animate({ top: '20%', left: '10%', width: 400, height: 250 }, 1000);
+          $('.minimalist').css({ color: '#333', borderColor: 'transparent' }, 1000);
+          revealed = true;
+        };
+      })(window);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js" defer></script>
 
