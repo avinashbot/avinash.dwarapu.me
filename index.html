@@ -128,9 +128,15 @@
 
     <footer class="easter">It's "avinashd" on Steam!</footer>
 
-    <script>
+    <script defer>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-59963703-1','auto');ga('send','pageview')
+    </script>
+
+    <script defer>
       (function(w, d) {
         var revealed = false;
+        var loadTime = Date.now();
         var collapser = d.getElementsByClassName('collapser')[0];
         var cardReveal = d.getElementsByClassName('card__reveal')[0];
 
@@ -138,16 +144,17 @@
           var width = w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth;
           if (revealed || width < 960) return;
 
+          revealed = true;
           collapser.classList.add('collapser--collapsed');
           cardReveal.classList.add('card__reveal--revealed');
-          revealed = true;
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'reveal',
+            eventAction: 'pressedAfterLoad',
+            eventValue: Date.now() - loadTime
+          });
         };
       })(window, document);
-    </script>
-
-    <script defer>
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-      ga('create','UA-59963703-1','auto');ga('send','pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   </body>

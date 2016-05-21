@@ -102,19 +102,16 @@ a {
 }
 
 .easter {
+  padding: 5px;
+  color: rgba(0,0,0,0);
   text-align: center;
 }
+
+/* Responsive Styles: Desktop */
 
 .mobile-separator {
   display: block;
 }
-
-.easter {
-  padding: 5px;
-  color: rgba(0,0,0,0);
-}
-
-/* Responsive Styles: Desktop */
 
 @media (min-width: 640px) {
   .mobile-separator {
