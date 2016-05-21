@@ -4,11 +4,21 @@ html, body {
   height: 100%;
 }
 
+@keyframes background-rotate {
+  0%, 100% { background-color: #FF8360; }
+  40% { background-color: #7DCE82; }
+  60% { background-color: #08B2E3; }
+  20% { background-color: #717C89; }
+  80% { background-color: #987284; }
+}
+
 body {
   min-width: 200px;
-  background-color: #ED6A5A;
+  background: #ED6A5A;
   font-family: "Arimo", Tahoma, sans-serif;
   color: #333;
+
+  animation: background-rotate 60s infinite;
 }
 
 a {
