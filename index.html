@@ -60,34 +60,37 @@
     </script>
   </head>
   <body>
-    <div class="hider"></div>
+    <div class="collapser"></div>
 
-    <div class="card">
+    <header class="card">
       <div class="card__contents">
-        <h1>Avinash Dwarapu</h1>
-        <h3>
-          <a href="https://cs.york.ac.uk">Student</a>.
-          <a href="https://github.com/avinashbot">Coder</a>.
-          <a href="#" class="minimalist" onclick="reveal();return false;">
-            Minimalist <span class="em-chevron">&raquo;</span>
+        <h1 class="card__name">avinash dwarapu</h1>
+        <h3 class="card__tagline">
+          <a href="https://cs.york.ac.uk">student</a>,
+          <a href="https://github.com/avinashbot">coder</a>,
+          <a href="#" class="card__reveal" onclick="reveal();return false;">
+            minimalist <span class="card__chevron">&raquo;</span>
           </a>
         </h3>
 
-        <p>
+        <address class="card__contact">
           <strong>@</strong> <a href="mailto:avinash@dwarapu.me">
             avinash&#64;dwarapu&#46;me
           </a><br>
-          <strong>🔑</strong> <a href="https://keybase.io/avinashd/key.asc">
+          <strong>&#x1f511;</strong> <a href="https://keybase.io/avinashd/key.asc">
             <code>668E 3AF6 F8A0 E0A4</code>
-          </a>
-        </p>
+          </a><!--<br>
+          <strong>&#x1f4c4;</strong> <a href="#">
+            r&eacute;sum&eacute;
+          </a>-->
+        </address>
       </div>
-    </div>
+    </header>
 
-    <div class="outside">
-      <section>
-        <h2>profiles</h2>
-        <ul>
+    <div class="links">
+      <section class="links__section">
+        <h2 class="links__title">profiles</h2>
+        <ul class="links__list">
           <li><a href="https://keybase.io/avinashd">keybase</a></li>
           <li><a href="https://github.com/avinashbot">github</a></li>
           <li><a href="https://codepen.io/avinashbot">codepen</a></li>
@@ -99,9 +102,9 @@
 
       <div class="mobile-separator"></div>
 
-      <section>
-        <h2>projects</h2>
-        <ul>
+      <section class="links__section">
+        <h2 class="links__title">projects</h2>
+        <ul class="links__list">
           <li><a href="https://github.com/avinashbot/redd">redd</a></li>
           <li><a href="https://github.com/avinashbot/satellite">satellite</a></li>
         </ul>
@@ -109,9 +112,9 @@
 
       <div class="mobile-separator"></div>
 
-      <section>
-        <h2>languages</h2>
-        <ul>
+      <section class="links__section">
+        <h2 class="links__title">languages</h2>
+        <ul class="links__list">
           <li>go</li>
           <li>ruby</li>
           <li>python</li>
@@ -126,20 +129,21 @@
     <footer class="easter">It's "avinashd" on Steam!</footer>
 
     <script>
-      (function() {
+      (function(w, d) {
         var revealed = false;
-        window.reveal = function() {
-          if (revealed || $(window).width() < 960) return;
-          $('.hider').animate({ top: '20%', left: '10%', width: 400, height: 230 }, 1000);
-          $('.minimalist').css({ color: '#333', borderColor: 'transparent' }, 1000);
-          $('.em-chevron').css({ opacity: 0 }, 1000, function() {
-            $(this).css({ display: 'none' });
-          });
+        var collapser = d.getElementsByClassName('collapser')[0];
+        var cardReveal = d.getElementsByClassName('card__reveal')[0];
+
+        w.reveal = function() {
+          var width = w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth;
+          if (revealed || width < 960) return;
+
+          collapser.classList.add('collapser--collapsed');
+          cardReveal.classList.add('card__reveal--revealed');
           revealed = true;
         };
-      })(window);
+      })(window, document);
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js" defer></script>
 
     <script defer>
       window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
