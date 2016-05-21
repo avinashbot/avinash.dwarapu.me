@@ -68,7 +68,9 @@
         <h3>
           <a href="https://cs.york.ac.uk">Student</a>.
           <a href="https://github.com/avinashbot">Coder</a>.
-          <a href="#" class="minimalist" onclick="reveal();return false;">Minimalist</a>.
+          <a href="#" class="minimalist" onclick="reveal();return false;">
+            Minimalist <span class="em-chevron">&raquo;</span>
+          </a>
         </h3>
 
         <p>
@@ -128,8 +130,11 @@
         var revealed = false;
         window.reveal = function() {
           if (revealed || $(window).width() < 960) return;
-          $('.hider').animate({ top: '20%', left: '10%', width: 400, height: 250 }, 1000);
+          $('.hider').animate({ top: '20%', left: '10%', width: 400, height: 230 }, 1000);
           $('.minimalist').css({ color: '#333', borderColor: 'transparent' }, 1000);
+          $('.em-chevron').css({ opacity: 0 }, 1000, function() {
+            $(this).css({ display: 'none' });
+          });
           revealed = true;
         };
       })(window);
