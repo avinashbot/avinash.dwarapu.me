@@ -10,6 +10,114 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Arimo" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+  </head>
+  <body>
+    <div class="collapser"></div>
+
+    <header class="card">
+      <div class="card__contents">
+        <h1 class="card__name">avinash dwarapu</h1>
+        <h2 class="card__tagline">
+          <a href="https://cs.york.ac.uk">student</a>,
+          <a href="https://github.com/avinashbot">coder</a>,
+          <a href="#" class="card__reveal" onclick="reveal();return false;">
+            minimalist <span class="card__chevron" aria-hidden="true">&raquo;</span>
+          </a>
+        </h2>
+
+        <address class="card__contact">
+          <strong title="email address" aria-hidden="true">@</strong>
+          <a href="mailto:avinash@dwarapu.me" aria-label="email address">
+            avinash&#64;dwarapu&#46;me
+          </a>
+
+          <br>
+
+          <strong title="pgp key" aria-hidden="true">&#x1f511;</strong>
+          <a href="https://keybase.io/avinashd/key.asc" aria-label="pgp key">
+            <code>668E 3AF6 F8A0 E0A4</code>
+          </a>
+
+          <!--
+            <br>
+
+            <strong title="curriculum vitae" aria-hidden="true">&#x1f4c4;</strong>
+            <a href="#" aria-label="curriculum vitae">
+              download r&eacute;sum&eacute;
+            </a>
+          -->
+        </address>
+      </div>
+    </header>
+
+    <div class="links">
+      <section class="links__section">
+        <h3 class="links__title">projects</h3>
+        <ul class="links__list">
+          <li><a href="https://github.com/avinashbot/redd">redd</a></li>
+          <li><a href="https://github.com/avinashbot/satellite">satellite</a></li>
+        </ul>
+      </section>
+
+      <div class="mobile-separator"></div>
+
+      <section class="links__section">
+        <h3 class="links__title">profiles</h3>
+        <ul class="links__list">
+          <li><a href="https://keybase.io/avinashd">keybase</a></li>
+          <li><a href="https://github.com/avinashbot">github</a></li>
+          <li><a href="https://codepen.io/avinashbot">codepen</a></li>
+          <li><a href="https://facebook.com/avinash.dwarapu">facebook</a></li>
+          <li><a href="https://twitter.com/avinashbot">twitter</a></li>
+          <li><a href="https://www.reddit.com/user/Mustermind">reddit</a></li>
+        </ul>
+      </section>
+
+      <div class="mobile-separator"></div>
+
+      <section class="links__section">
+        <h3 class="links__title">languages</h3>
+        <ul class="links__list">
+          <li>go</li>
+          <li>ruby</li>
+          <li>python</li>
+          <li>html5 &amp; css3</li>
+          <li>javascript</li>
+          <li>java</li>
+          <li>kotlin</li>
+        </ul>
+      </section>
+    </div>
+
+    <script defer>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-59963703-1','auto');ga('send','pageview')
+    </script>
+
+    <script defer>
+      (function(w, d) {
+        var revealed = false;
+        var loadTime = Date.now();
+        var collapser = d.getElementsByClassName('collapser')[0];
+        var cardReveal = d.getElementsByClassName('card__reveal')[0];
+
+        w.reveal = function() {
+          var width = w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth;
+          if (revealed || width < 960) return;
+
+          revealed = true;
+          collapser.classList.add('collapser--collapsed');
+          cardReveal.classList.add('card__reveal--revealed');
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'reveal',
+            eventAction: 'pressedAfterLoad',
+            eventValue: Date.now() - loadTime
+          });
+        };
+      })(window, document);
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
     <script type="application/ld+json">
       {
@@ -58,104 +166,5 @@
         ]
       }
     </script>
-  </head>
-  <body>
-    <div class="collapser"></div>
-
-    <header class="card">
-      <div class="card__contents">
-        <h1 class="card__name">avinash dwarapu</h1>
-        <h3 class="card__tagline">
-          <a href="https://cs.york.ac.uk">student</a>,
-          <a href="https://github.com/avinashbot">coder</a>,
-          <a href="#" class="card__reveal" onclick="reveal();return false;">
-            minimalist <span class="card__chevron">&raquo;</span>
-          </a>
-        </h3>
-
-        <address class="card__contact">
-          <strong>@</strong> <a href="mailto:avinash@dwarapu.me">
-            avinash&#64;dwarapu&#46;me
-          </a><br>
-          <strong>&#x1f511;</strong> <a href="https://keybase.io/avinashd/key.asc">
-            <code>668E 3AF6 F8A0 E0A4</code>
-          </a><!--<br>
-          <strong>&#x1f4c4;</strong> <a href="#">
-            r&eacute;sum&eacute;
-          </a>-->
-        </address>
-      </div>
-    </header>
-
-    <div class="links">
-      <section class="links__section">
-        <h2 class="links__title">profiles</h2>
-        <ul class="links__list">
-          <li><a href="https://keybase.io/avinashd">keybase</a></li>
-          <li><a href="https://github.com/avinashbot">github</a></li>
-          <li><a href="https://codepen.io/avinashbot">codepen</a></li>
-          <li><a href="https://facebook.com/avinash.dwarapu">facebook</a></li>
-          <li><a href="https://twitter.com/avinashbot">twitter</a></li>
-          <li><a href="https://www.reddit.com/user/Mustermind">reddit</a></li>
-        </ul>
-      </section>
-
-      <div class="mobile-separator"></div>
-
-      <section class="links__section">
-        <h2 class="links__title">projects</h2>
-        <ul class="links__list">
-          <li><a href="https://github.com/avinashbot/redd">redd</a></li>
-          <li><a href="https://github.com/avinashbot/satellite">satellite</a></li>
-        </ul>
-      </section>
-
-      <div class="mobile-separator"></div>
-
-      <section class="links__section">
-        <h2 class="links__title">languages</h2>
-        <ul class="links__list">
-          <li>go</li>
-          <li>ruby</li>
-          <li>python</li>
-          <li>html5 &amp; css3</li>
-          <li>javascript</li>
-          <li>java</li>
-          <li>kotlin</li>
-        </ul>
-      </section>
-    </div>
-
-    <footer class="easter">It's "avinashd" on Steam!</footer>
-
-    <script defer>
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-      ga('create','UA-59963703-1','auto');ga('send','pageview')
-    </script>
-
-    <script defer>
-      (function(w, d) {
-        var revealed = false;
-        var loadTime = Date.now();
-        var collapser = d.getElementsByClassName('collapser')[0];
-        var cardReveal = d.getElementsByClassName('card__reveal')[0];
-
-        w.reveal = function() {
-          var width = w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth;
-          if (revealed || width < 960) return;
-
-          revealed = true;
-          collapser.classList.add('collapser--collapsed');
-          cardReveal.classList.add('card__reveal--revealed');
-          ga('send', {
-            hitType: 'event',
-            eventCategory: 'reveal',
-            eventAction: 'pressedAfterLoad',
-            eventValue: Date.now() - loadTime
-          });
-        };
-      })(window, document);
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   </body>
 </html>

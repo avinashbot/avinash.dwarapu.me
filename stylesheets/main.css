@@ -8,13 +8,13 @@ body {
   min-width: 200px;
   background: #ED6A5A;
   font-family: "Arimo", Tahoma, sans-serif;
-  color: #333;
+  color: #111;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px dashed #222;
+  border-bottom: 1px dashed #111;
 }
 
 /* General Styles (Mobile-First) */
@@ -101,12 +101,6 @@ a {
   content: "";
 }
 
-.easter {
-  padding: 5px;
-  color: rgba(0,0,0,0);
-  text-align: center;
-}
-
 /* Responsive Styles: Desktop */
 
 .mobile-separator {
@@ -148,7 +142,7 @@ a {
 
   .card__reveal {
     border-bottom: 1px dashed #222;
-    color: #0074D9;
+    color: #0069c6; /* not standard clrs.cc for accessibility */
   }
 
   .card__reveal--revealed {
@@ -171,14 +165,5 @@ a {
 
   .links__section {
     border-top: 2px solid #E6EBE0;
-  }
-
-  .easter {
-    position: absolute;
-    bottom: 0; right: 0;
-    text-align: right;
-    font-weight: bolder;
-
-    z-index: 2;
   }
 }
