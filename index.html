@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
   </head>
   <body>
-    <div id="collapser" class="collapser"></div>
+    <div id="collapser" class="collapser collapser--no-js"></div>
+    <script>document.getElementById('collapser').classList.remove('collapser--no-js');</script>
 
     <header class="card">
       <div class="card__contents">
