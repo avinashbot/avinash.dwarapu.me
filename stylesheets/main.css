@@ -141,12 +141,12 @@ a {
   }
 
   .card__reveal {
-    border-bottom: 1px dashed #222;
+    border-bottom: 1px dashed #111;
     color: #0069c6; /* not standard clrs.cc for accessibility */
   }
 
   .card__reveal--revealed {
-    color: #333;
+    color: #111;
     border-color: transparent;
   }
 
