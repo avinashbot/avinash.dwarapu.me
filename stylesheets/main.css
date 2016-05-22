@@ -99,13 +99,18 @@ a {
   margin-bottom: 10px;
 }
 
-.links__list li::after {
+.links__link::after {
   font-weight: bolder;
   content: ",";
 }
 
-.links__list li:last-of-type::after {
+.links__link:last-of-type::after {
   content: "";
+}
+
+.links__languages {
+  color: #2c2c2c;
+  font-weight: lighter;
 }
 
 /* Responsive Styles: Desktop */
