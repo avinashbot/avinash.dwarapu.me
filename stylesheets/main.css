@@ -11,6 +11,10 @@ body {
   color: #111;
 }
 
+h1, h2 {
+  font-family: "Roboto", Tahoma, sans-serif;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -38,7 +42,6 @@ a {
 
 .card__contents {
   padding: 20px;
-  font-family: "Roboto", Tahoma, sans-serif;
   text-align: center;
 }
 
