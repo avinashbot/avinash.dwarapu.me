@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
   </head>
   <body>
-    <div class="collapser"></div>
+    <div id="collapser" class="collapser"></div>
 
     <header class="card">
       <div class="card__contents">
@@ -20,7 +20,7 @@
         <p class="card__tagline">
           <a href="https://cs.york.ac.uk">student</a>,
           <a href="https://github.com/avinashbot">coder</a>,
-          <a href="#" class="card__reveal" onclick="reveal();return false;">
+          <a href="#" id="card__reveal" class="card__reveal" onclick="reveal();return false;">
             minimalist <span class="card__chevron" aria-hidden="true">&raquo;</span>
           </a>
         </p>
@@ -90,31 +90,34 @@
     </div>
 
     <script defer>
-      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-      ga('create','UA-59963703-1','auto');ga('send','pageview')
-    </script>
-
-    <script defer>
       (function(w, d) {
-        var revealed = false;
-        var loadTime = Date.now();
-        var collapser = d.getElementsByClassName('collapser')[0];
-        var cardReveal = d.getElementsByClassName('card__reveal')[0];
 
-        w.reveal = function() {
-          var width = w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth;
-          if (revealed || width < 960) return;
+        /* google analytics */
+        var ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-59963703-1','auto');ga('send','pageview');
+        w.ga = ga;
 
-          revealed = true;
-          collapser.classList.add('collapser--collapsed');
-          cardReveal.classList.add('card__reveal--revealed');
-          ga('send', {
-            hitType: 'event',
-            eventCategory: 'reveal',
-            eventAction: 'pressedAfterLoad',
-            eventValue: Date.now() - loadTime
-          });
-        };
+        /* reveal */
+        w.reveal = (function(w) {
+          var loadTime = Date.now();
+          var revealed = false;
+
+          return function() {
+            if (revealed || (w.innerWidth||d.documentElement.clientWidth||d.body.clientWidth) < 960)
+              return;
+
+            revealed = true;
+            d.getElementById('collapser').classList.add('collapser--collapsed');
+            d.getElementById('card__reveal').classList.add('card__reveal--revealed');
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'reveal',
+              eventAction: 'pressedAfterLoad',
+              eventValue: Date.now() - loadTime
+            });
+          };
+        })(w);
+
       })(window, document);
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
