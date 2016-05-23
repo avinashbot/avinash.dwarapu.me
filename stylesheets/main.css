@@ -95,16 +95,16 @@ a {
   font-size: 1.2em;
 }
 
-.links__list li {
+.links__item {
   margin-bottom: 10px;
 }
 
-.links__link::after {
+.links__item::after {
   font-weight: bolder;
   content: ",";
 }
 
-.links__link:last-of-type::after {
+.links__item:last-of-type::after {
   content: "";
 }
 
