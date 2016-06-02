@@ -25,18 +25,17 @@ a {
 
 .collapser {
   display: none;
-  background-color: #E6EBE0;
 
   transition-property: top, left, width, height;
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.23, 1.0, 0.32, 1.0);
 }
 
-.collapser.collapser--no-js {
+.no-js .collapser {
   display: none;
 }
 
-.card {
+.card, .collapser {
   background-color: #E6EBE0;
 }
 
@@ -50,19 +49,10 @@ a {
   font-size: 2.4em;
 }
 
-.card__tagline {
-  margin: 0;
-  font-weight: normal;
-  font-size: 1.4em;
-}
-
-.card__reveal {
-  border-bottom: none;
-  transition: color 1s, border-color 1s;
-}
-
-.card__chevron, .card__reveal--revealed .card__chevron {
+.card__button, .no-js .card__button {
   display: none;
+  transition: opacity 0.5s;
+  z-index: 3;
 }
 
 .card__contact {
@@ -143,34 +133,45 @@ a {
     z-index: 3;
   }
 
+  .card__button {
+    position: absolute;
+    right: -30px; /* button height / 2 */
+    top: 105px; /* [ 270 (card height) - 60 (button height) ] / 2 */
+
+    display: inline-block;
+    background-color: #607D8B;
+    border-radius: 50%;
+    padding: 2px 0 0 2px; /* visually center chevron */
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    color: #fff;
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 35px;
+  }
+
+  .card--revealed .card__button {
+    opacity: 0;
+    cursor: default;
+  }
+
   .card, .collapser--collapsed {
-    top: 20%; left: 10%; width: 400px; height: 270px;
+    top: 20%; left: 5%; width: 420px; height: 270px;
   }
 
   .card__contents {
-    padding-top: 60px;
+    padding-top: 65px;
+    padding-right: 30px; /* to accommodate button */
     text-align: left;
-  }
-
-  .card__reveal {
-    border-bottom: 1px dashed #111;
-    color: #0069c6; /* not standard clrs.cc for accessibility */
-  }
-
-  .card__reveal--revealed {
-    color: #111;
-    border-color: transparent;
-  }
-
-  .card__chevron {
-    display: inline;
   }
 
   .links {
     position: absolute;
-    top: 20%; left: 10%; right: 0; bottom: 0;
+    top: 20%; left: 5%; right: 0; bottom: 0;
 
-    margin-left: 400px; /* 400px being the card width */
+    margin-left: 420px; /* 420px being the card width */
     text-align: left;
     z-index: 0;
   }

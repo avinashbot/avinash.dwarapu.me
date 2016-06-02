@@ -11,33 +11,31 @@
     <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
   </head>
-  <body>
-    <div id="collapser" class="collapser collapser--no-js"></div>
-    <script>document.getElementById('collapser').classList.remove('collapser--no-js');</script>
+  <body class="no-js">
+    <script>document.body.className = '';</script>
 
-    <header class="card">
+    <div id="collapser" class="collapser"></div>
+
+    <header class="card" id="card">
+      <div class="card__button" onclick="reveal();" aria-hidden="true">&raquo;</div>
+
       <div class="card__contents">
         <h1 class="card__name">avinash dwarapu</h1>
-        <p class="card__tagline">
-          <a href="https://cs.york.ac.uk">student</a>,
-          <a href="https://github.com/avinashbot">coder</a>,
-          <a href="#" id="card__reveal" class="card__reveal" onclick="reveal();return false;">
-            minimalist <span class="card__chevron" aria-hidden="true">&raquo;</span>
-          </a>
-        </p>
 
         <address class="card__contact">
-          <strong title="email address" aria-hidden="true">@</strong>
-          <a href="mailto:avinash@dwarapu.me" aria-label="email address">
-            avinash&#64;dwarapu&#46;me
-          </a>
+          <strong title="degree and university" aria-label="degree and university">&#x1f393;</strong>
+          <a href="https://cs.york.ac.uk">Computer Science</a> at
+          <a href="https://york.ac.uk">the University of York</a>
 
           <br>
 
-          <strong title="pgp key" aria-hidden="true">&#x1f511;</strong>
-          <a href="https://keybase.io/avinashd/key.asc" aria-label="pgp key">
-            <code>668E 3AF6 F8A0 E0A4</code>
-          </a>
+          <strong title="email address" aria-label="email address">@</strong>
+          <a href="mailto:avinash@dwarapu.me">avinash&#64;dwarapu&#46;me</a>
+
+          <br>
+
+          <strong title="pgp key" aria-label="pgp key">&#x1f511;</strong>
+          <a href="https://keybase.io/avinashd/key.asc"><code>668E 3AF6 F8A0 E0A4</code></a>
 
           <!--
             <br>
@@ -112,7 +110,7 @@
 
             revealed = true;
             d.getElementById('collapser').classList.add('collapser--collapsed');
-            d.getElementById('card__reveal').classList.add('card__reveal--revealed');
+            d.getElementById('card').classList.add('card--revealed');
             ga('send', {
               hitType: 'event',
               eventCategory: 'reveal',
