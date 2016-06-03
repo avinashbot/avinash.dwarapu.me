@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Avinash Dwarapu</title>
-    <meta name="description" content="My Personal Website.">
+    <title>avinash dwarapu - hello!</title>
+    <meta name="description" content="avinash dwarapu - my profile and project links.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Arimo" rel="stylesheet" type="text/css">
@@ -25,9 +25,9 @@
     <div id="collapser" class="collapser"></div>
 
     <header class="card" id="card">
-      <div class="button button--open" aria-hidden="true">
-        <div class="button__circle" onclick="reveal();">
-          <span class="button__chevron">&raquo;</span>
+      <div class="button" aria-hidden="true">
+        <div class="button__circle" onclick="toggleReveal();">
+          <span class="button__chevron">&laquo;</span>
         </div>
       </div>
 
@@ -101,31 +101,12 @@
       </section>
     </div>
 
-    <div class="button button--close" aria-hidden="true">
-      <div class="button__circle" onclick="hide();">
-        <span class="button__chevron">&laquo;</span>
-      </div>
-    </div>
-
     <script defer>
       (function(w, body) {
-        var revealed = false;
-        function shouldSkipCardAction() {
-          return (w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth) < 960;
-        }
-
-        w.reveal = function reveal() {
-          if (revealed || shouldSkipCardAction()) return;
-          revealed = true;
-          body.classList.add('body--revealed');
+        w.toggleReveal = function toggleReveal() {
+          if ((w.innerWidth || d.documentElement.clientWidth || body.clientWidth) < 960) return;
+          body.classList.toggle('body--revealed');
         };
-
-        w.hide = function hide() {
-          if (!revealed || shouldSkipCardAction()) return;
-          revealed = false;
-          body.classList.remove('body--revealed');
-        };
-
       })(window, document.body);
     </script>
 
