@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Arimo" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+
+    <!--[if lt IE 9]>
+      <script>
+        // Internet Explorer, ladies and gentlemen.
+        var e = ['header', 'section'];
+        for (var i = 0; i < e.length; i++) document.createElement(e[i]);
+      </script>
+    <![endif]-->
   </head>
   <body class="no-js">
     <script>document.body.className = '';</script>
@@ -111,8 +119,8 @@
               return;
 
             revealed = true;
-            d.getElementById('collapser').classList.add('collapser--collapsed');
-            d.getElementById('card').classList.add('card--revealed');
+            d.getElementById('collapser').className += ' collapser--collapsed';
+            d.getElementById('card').className += ' card--revealed';
             ga('send', {
               hitType: 'event',
               eventCategory: 'reveal',
