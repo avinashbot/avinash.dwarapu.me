@@ -142,10 +142,15 @@ a {
     right: -30px; /* button height / 2 */
     top: 103px; /* [ 270 (card height) - 64 (button height) ] / 2 */
 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     display: block;
     width: 64px;
     height: 64px;
-    user-select: none;
     z-index: 3;
   }
 
