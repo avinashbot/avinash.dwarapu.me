@@ -19,15 +19,15 @@
       </script>
     <![endif]-->
   </head>
-  <body class="no-js">
-    <script>document.body.className = '';</script>
+  <body class="body--revealed">
+    <script>document.body.classList.remove('body--revealed');</script>
 
     <div id="collapser" class="collapser"></div>
 
     <header class="card" id="card">
-      <div class="card__button-container">
-        <div class="card__button" onclick="reveal();" aria-hidden="true">
-          <span class="card__chevron">&raquo;</span>
+      <div class="button button--open" aria-hidden="true">
+        <div class="button__circle" onclick="reveal();">
+          <span class="button__chevron">&raquo;</span>
         </div>
       </div>
 
@@ -101,38 +101,33 @@
       </section>
     </div>
 
+    <div class="button button--close" aria-hidden="true">
+      <div class="button__circle" onclick="hide();">
+        <span class="button__chevron">&laquo;</span>
+      </div>
+    </div>
+
     <script defer>
-      (function(w, d) {
+      (function(w, body) {
+        var revealed = false;
+        function shouldSkipCardAction() {
+          return (w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth) < 960;
+        }
 
-        /* google analytics */
-        var ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-59963703-1','auto');ga('send','pageview');
-        w.ga = ga;
+        w.reveal = function reveal() {
+          if (revealed || shouldSkipCardAction()) return;
+          revealed = true;
+          body.classList.add('body--revealed');
+        };
 
-        /* reveal */
-        w.reveal = (function(w) {
-          var loadTime = Date.now();
-          var revealed = false;
+        w.hide = function hide() {
+          if (!revealed || shouldSkipCardAction()) return;
+          revealed = false;
+          body.classList.remove('body--revealed');
+        };
 
-          return function() {
-            if (revealed || (w.innerWidth||d.documentElement.clientWidth||d.body.clientWidth) < 960)
-              return;
-
-            revealed = true;
-            d.getElementById('collapser').className += ' collapser--collapsed';
-            d.getElementById('card').className += ' card--revealed';
-            ga('send', {
-              hitType: 'event',
-              eventCategory: 'reveal',
-              eventAction: 'pressedAfterLoad',
-              eventValue: Date.now() - loadTime
-            });
-          };
-        })(w);
-
-      })(window, document);
+      })(window, document.body);
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
     <script type="application/ld+json">
       {

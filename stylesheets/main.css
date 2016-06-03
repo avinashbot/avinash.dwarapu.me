@@ -31,17 +31,16 @@ a {
   transition-timing-function: cubic-bezier(0.23, 1.0, 0.32, 1.0);
 }
 
-.no-js .collapser {
-  display: none;
-}
-
 .card, .collapser {
   background-color: #E6EBE0;
 }
 
-.card__button, .no-js .card__button {
+.button {
   display: none;
   z-index: 3;
+}
+
+.button__circle {
   transition: box-shadow   0.1s linear,
               0.4s width   0.1s ease-in,
               0.4s height  0.1s ease-in,
@@ -129,7 +128,7 @@ a {
     z-index: 1;
   }
 
-  .collapser--collapsed {
+  .body--revealed .collapser {
     box-shadow: 0 10px 6px -6px #444;
   }
 
@@ -138,20 +137,41 @@ a {
     z-index: 3;
   }
 
-  .card__button-container {
-    position: absolute;
-    right: -30px; /* button height / 2 */
-    top: 105px; /* [ 270 (card height) - 60 (button height) ] / 2 */
-    width: 62px;
-    height: 62px;
+  .button {
+    display: block;
   }
 
-  .card__button {
+  .button--open .button__circle {
+    padding: 4px 0 0 4px; /* visually center chevron */
+  }
+
+  .button--close .button__circle {
+    padding: 4px 0 0 0;
+  }
+
+  .button--open {
+    position: absolute;
+    right: -30px; /* button height / 2 */
+    top: 103px; /* [ 270 (card height) - 64 (button height) ] / 2 */
+    width: 64px;
+    height: 64px;
+    z-index: 4;
+  }
+
+  .button--close {
+    position: absolute;
+    right: 16px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    z-index: 0;
+  }
+
+  .button__circle {
     display: inline-block;
 
-    background-color: #607D8B;
+    background-color: #EF5350;
     border-radius: 50%;
-    padding: 2px 0 0 2px; /* visually center chevron */
     text-align: center;
     width: 60px;
     height: 60px;
@@ -160,23 +180,24 @@ a {
     cursor: pointer;
     line-height: 50px;
     font-size: 35px;
+    overflow: hidden;
   }
 
-  .card__button:hover {
+  .button__circle:hover {
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
   }
 
-  .card--revealed .card__button {
+  .body--revealed .button--open .button__circle {
     width: 0; height: 0; padding: 0;
     margin: 32px 0 0 32px; /* (size / 2) + padding */
     cursor: default;
   }
 
-  .card--revealed .card__chevron {
+  .body--revealed .button--open .button__chevron {
     display: none;
   }
 
-  .card, .collapser--collapsed {
+  .card, .body--revealed .collapser {
     top: 20%; left: 5%; width: 420px; height: 270px;
   }
 
