@@ -19,15 +19,21 @@
       </script>
     <![endif]-->
   </head>
-  <body class="body--revealed">
-    <script>document.body.classList.remove('body--revealed');</script>
+  <body class="body body--revealed">
+    <script>
+      /* Collapser is revealed by default if javascript can't reveal it. This can happen if visitors
+       * turn off javascript (a reasonable decision) or view this on a pretty old browser that
+       * doesn't support classList, in which case, we can't toggle it easily later.
+       */
+      document.body.classList.remove('body--revealed');
+    </script>
 
     <div id="collapser" class="collapser"></div>
 
     <header class="card" id="card">
-      <div class="button" aria-hidden="true">
-        <div class="button__circle" onclick="toggleReveal();">
-          <span class="button__chevron">&laquo;</span>
+      <div class="reveal-button" aria-hidden="true">
+        <div class="reveal-button__circle" onclick="toggleReveal();">
+          <span class="reveal-button__chevron">&laquo;</span>
         </div>
       </div>
 
@@ -38,23 +44,14 @@
           <strong title="degree and university" aria-label="degree and university">&#x1f393;</strong>
           <a href="https://cs.york.ac.uk">Computer Science</a> at
           <a href="https://york.ac.uk">the University of York</a>
-
           <br>
 
           <strong title="email address" aria-label="email address">@</strong>
           <a href="mailto:avinash@dwarapu.me">avinash&#64;dwarapu&#46;me</a>
-
           <br>
 
           <strong title="pgp key" aria-label="pgp key">&#x1f511;</strong>
           <a href="https://keybase.io/avinashd/key.asc"><code>668E 3AF6 F8A0 E0A4</code></a>
-
-          <!--
-            <br>
-
-            <strong title="curriculum vitae" aria-label="curriculum vitae">&#x1f4c4;</strong>
-            <a href="#">download r&eacute;sum&eacute;</a>
-          -->
         </address>
       </div>
     </header>

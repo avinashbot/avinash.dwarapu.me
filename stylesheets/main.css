@@ -16,36 +16,20 @@ h1, h2 {
 }
 
 a {
-  color: #111; /* color:inherit not supported on IE */
   text-decoration: none;
+  color: #111; /* color:inherit not supported on IE */
   border-bottom: 1px dashed #111;
 }
 
 /* General Styles (Mobile-First) */
 
-.collapser {
+.collapser, .reveal-button {
   display: none;
-
-  transition-property: top, left, width, height;
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.23, 1.0, 0.32, 1.0);
 }
 
-.card, .collapser {
+.card {
   background-color: #E6EBE0;
-}
-
-.button {
-  display: none;
-  z-index: 3;
-}
-
-.button__circle {
-  transition: all 0.1s ease-out;
-}
-
-.button__chevron {
-  transition: 0.4s all 0.1s ease-out;
+  border-radius: 0 0 10px 10px;
 }
 
 .card__contents {
@@ -107,11 +91,11 @@ a {
   font-weight: lighter;
 }
 
-/* Responsive Styles: Desktop */
-
 .mobile-separator {
   display: block;
 }
+
+/* Responsive Styles: Desktop */
 
 @media (min-width: 640px) {
   .mobile-separator {
@@ -121,11 +105,21 @@ a {
 
 @media screen and (min-width: 960px) and (min-height: 480px) {
   .collapser {
-    display: block;
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
+    display: block;
+    border-radius: 0;
+    background-color: #E6EBE0;
     z-index: 1;
+
+    transition-property: top, left, width, height;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.23, 1.0, 0.32, 1.0);
+
   }
 
   .body--revealed .collapser {
@@ -134,59 +128,7 @@ a {
 
   .card {
     position: absolute;
-    z-index: 3;
-  }
-
-  .button {
-    display: block;
-    position: absolute;
-    right: -30px; /* button height / 2 */
-    top: 103px; /* [ 270 (card height) - 64 (button height) ] / 2 */
-    width: 64px;
-    height: 64px;
-    z-index: 4;
-  }
-
-  .button__circle {
-  }
-
-  .button__circle {
-    display: inline-block;
-
-    background-color: #EB5B61;
-    border-radius: 50%;
-    text-align: center;
-    width: 64px;
-    height: 64px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
-    color: #fff;
-    cursor: pointer;
-    line-height: 50px;
-    font-size: 35px;
-    overflow: hidden;
-  }
-
-  .button__circle:hover {
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
-  }
-
-  .button__circle:active {
-    transform: scale(0.9);
-  }
-
-  .button__chevron {
-    display: inline-block;
-    text-align: center;
-    padding: 4px 0 0 0; /* visually center chevron (by eye) */
-  }
-
-  .body--revealed .button__chevron {
-    padding: 4px 4px 0 0;
-    transform: rotateY(180deg);
-  }
-
-  .card, .body--revealed .collapser {
-    top: 20%; left: 5%; width: 420px; height: 270px;
+    z-index: 2;
   }
 
   .card__contents {
@@ -195,9 +137,69 @@ a {
     text-align: left;
   }
 
+  .reveal-button {
+    position: absolute;
+    right: -30px; /* button height / 2 */
+    top: 103px; /* [ 270 (card height) - 64 (button height) ] / 2 */
+
+    display: block;
+    width: 64px;
+    height: 64px;
+    z-index: 3;
+  }
+
+  .reveal-button__circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+
+    transition: all 0.1s ease-out;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: #EB5B61;
+    cursor: pointer;
+
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+  }
+
+  .reveal-button__circle:hover {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .reveal-button__circle:active {
+    transform: scale(0.9);
+  }
+
+  .reveal-button__chevron {
+    display: inline-block;
+    padding: 4px 0 0 0; /* visually center chevron (by eye) */
+    transition: 0.4s all 0.1s ease-out;
+    text-align: center;
+  }
+
+  .body--revealed .reveal-button__chevron {
+    padding: 4px 4px 0 0;
+    transform: rotateY(180deg);
+  }
+
+  .card, .body--revealed .collapser {
+    top: 20%;
+    left: 5%;
+    width: 420px;
+    height: 270px;
+    border-radius: 5px;
+  }
+
   .links {
     position: absolute;
-    top: 20%; left: 5%; right: 0; bottom: 0;
+    top: 20%;
+    left: 5%;
+    right: 0;
+    bottom: 0;
 
     margin-left: 450px; /* 420px (card width) + 30px (button width) */
     text-align: left;
