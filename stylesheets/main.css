@@ -29,7 +29,6 @@ a {
 
 .card {
   background-color: #E6EBE0;
-  border-radius: 0 0 10px 10px;
 }
 
 .card__contents {
@@ -49,7 +48,7 @@ a {
 }
 
 /* Make "UI" elements unselectable */
-.card__icon, .reveal-button {
+.card__icon, .reveal-button__chevron {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -131,7 +130,7 @@ a {
     transition-timing-function: cubic-bezier(0.23, 1.0, 0.32, 1.0);
   }
 
-  .body--revealed .collapser {
+  .page--revealed .collapser {
     border-radius: 5px;
   }
 
@@ -182,6 +181,7 @@ a {
 
   .reveal-button__circle:active {
     transform: scale(0.9);
+    background-color: #ED6E72;
   }
 
   .reveal-button__chevron {
@@ -191,12 +191,12 @@ a {
     text-align: center;
   }
 
-  .body--revealed .reveal-button__chevron {
+  .page--revealed .reveal-button__chevron {
     padding: 4px 4px 0 0;
     transform: rotateY(180deg);
   }
 
-  .card, .body--revealed .collapser {
+  .card, .page--revealed .collapser {
     top: 20%;
     left: 5%;
     width: 420px;

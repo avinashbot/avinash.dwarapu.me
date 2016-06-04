@@ -1,36 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html class="page page--revealed" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>avinash dwarapu - hello!</title>
-    <meta name="description" content="avinash dwarapu - my profile and project links.">
+    <title>Avinash Dwarapu - Hello!</title>
+    <meta name="description" content="Avinash Dwarapu: my profile and project links.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Arimo" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
 
+    <script>
+      // Avoiding the FOUC: http://www.paulirish.com/2009/avoiding-the-fouc-v3
+      if (!window.localStorage || localStorage.getItem('revealed') !== 'yes') {
+        document.documentElement.classList.remove('page--revealed');
+      }
+    </script>
+
     <!--[if lt IE 9]>
       <script>
-        // Internet Explorer, ladies and gentlemen.
         var e = ['header', 'section'];
         for (var i = 0; i < e.length; i++) document.createElement(e[i]);
       </script>
     <![endif]-->
   </head>
-  <body class="body body--revealed">
-    <script>
-      /* Collapser is revealed by default if javascript can't reveal it. This can happen if visitors
-       * turn off javascript (a reasonable decision) or view this on a pretty old browser that
-       * doesn't support classList, in which case, we can't toggle it easily later.
-       */
-      document.body.classList.remove('body--revealed');
-    </script>
+  <body>
+    <div class="collapser"></div>
 
-    <div id="collapser" class="collapser"></div>
-
-    <header class="card" id="card">
+    <header class="card">
       <div class="reveal-button" aria-hidden="true">
         <div class="reveal-button__circle" onclick="toggleReveal();">
           <span class="reveal-button__chevron">&laquo;</span>
@@ -41,7 +39,7 @@
         <h1 class="card__name">avinash dwarapu</h1>
 
         <address class="card__contact">
-          <strong class="card__icon" title="degree and university" aria-label="degree and university">&#x1f393;</strong>
+          <strong class="card__icon" title="studying" aria-label="studying">&#x1f393;</strong>
           <a href="https://cs.york.ac.uk">Computer Science</a> at
           <a href="https://york.ac.uk">the University of York</a>
           <br>
@@ -98,13 +96,14 @@
       </section>
     </div>
 
-    <script defer>
-      (function(w, body) {
+    <script>
+      (function(w, d) {
         w.toggleReveal = function toggleReveal() {
-          if ((w.innerWidth || d.documentElement.clientWidth || body.clientWidth) < 960) return;
-          body.classList.toggle('body--revealed');
+          if ((w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth) < 960) return;
+          var revealed = d.documentElement.classList.toggle('page--revealed');
+          if (w.localStorage) w.localStorage.setItem('revealed', revealed ? 'yes' : 'no');
         };
-      })(window, document.body);
+      })(window, document);
     </script>
 
     <script type="application/ld+json">
