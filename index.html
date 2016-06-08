@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
 
     <script>
-      // Avoiding the FOUC: http://www.paulirish.com/2009/avoiding-the-fouc-v3
-      if (!window.localStorage || localStorage.getItem('revealed') !== 'yes') {
+      if (!window.sessionStorage || sessionStorage.getItem('revealed') !== 'y') {
         document.documentElement.classList.remove('page--revealed');
       }
     </script>
@@ -97,13 +96,11 @@
     </div>
 
     <script>
-      (function(w, d) {
-        w.toggleReveal = function toggleReveal() {
-          if ((w.innerWidth || d.documentElement.clientWidth || d.body.clientWidth) < 960) return;
-          var revealed = d.documentElement.classList.toggle('page--revealed');
-          if (w.localStorage) w.localStorage.setItem('revealed', revealed ? 'yes' : 'no');
-        };
-      })(window, document);
+      window.toggleReveal = function toggleReveal() {
+        if (document.documentElement.clientWidth < 960) return;
+        var revealed = document.documentElement.classList.toggle('page--revealed');
+        if (window.sessionStorage) window.sessionStorage.setItem('revealed', revealed ? 'y' : 'n');
+      };
     </script>
 
     <script type="application/ld+json">
