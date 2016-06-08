@@ -1,4 +1,4 @@
-/* Global Styles (should probably belong in normalize.css?) */
+/* Global Styles */
 
 html, body {
   height: 100%;
@@ -21,11 +21,21 @@ a {
   border-bottom: 1px dashed #111;
 }
 
-/* General Styles (Mobile-First) */
+.card__icon, .reveal-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Mobile */
 
 .collapser, .reveal-button {
   display: none;
 }
+
+/* Card */
 
 .card {
   background-color: #E6EBE0;
@@ -47,14 +57,7 @@ a {
   font-style: normal;
 }
 
-/* Make "UI" elements unselectable */
-.card__icon, .reveal-button__chevron {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+/* Links */
 
 .links {
   text-align: center;
@@ -99,17 +102,19 @@ a {
   font-weight: lighter;
 }
 
+/* Mobile Separator (for links columns) */
+
 .mobile-separator {
   display: block;
 }
-
-/* Responsive Styles: Desktop */
 
 @media (min-width: 640px) {
   .mobile-separator {
     display: none;
   }
 }
+
+/* Desktop Styles */
 
 @media screen and (min-width: 960px) and (min-height: 480px) {
   .collapser {
@@ -142,13 +147,13 @@ a {
 
   .card__contents {
     padding-top: 65px;
-    padding-right: 30px; /* to accommodate button */
+    padding-right: 32px; /* to accommodate button */
     text-align: left;
   }
 
   .reveal-button {
     position: absolute;
-    right: -30px; /* button height / 2 */
+    right: -32px; /* button height / 2 */
     top: 103px; /* [ 270 (card height) - 64 (button height) ] / 2 */
 
     display: block;
