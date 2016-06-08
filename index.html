@@ -3,15 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Avinash Dwarapu - Hello!</title>
-    <meta name="description" content="Avinash Dwarapu: my profile and project links.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Arimo" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="stylesheets/normalize.css" type="text/css">
+    <title>I'm Avinash Dwarapu. Hello!</title>
+    <meta name="description" content="I'm Avinash Dwarapu. Check out my profiles and projects.">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Arimo" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
 
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://schema.org/"
+        },
+        "@type": "Person",
+        "@id": "https://avinash.dwarapu.me",
+        "url": "https://avinash.dwarapu.me",
+        "email": "avinash@dwarapu.me",
+        "givenName": "Avinash",
+        "familyName": "Dwarapu",
+        "memberOf": {
+          "@type": "ProgramMembership",
+          "programName": "Computer Science",
+          "url": "https://cs.york.ac.uk/",
+          "hostingOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of York",
+            "url": "https://www.york.ac.uk/"
+          }
+        },
+        "@reverse": {
+          "author": [
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "Redd",
+              "codeRepository": "https://github.com/avinashbot/redd",
+              "programmingLanguage": {"@type": "Language", "name": "Ruby"}
+            },
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "satellite",
+              "codeRepository": "https://github.com/avinashbot/satellite",
+              "programmingLanguage": {"@type": "Language", "name": "Go"}
+            }
+          ]
+        },
+        "sameAs": [
+          "https://keybase.io/avinashd",
+          "https://github.com/avinashbot",
+          "https://facebook.com/avinash.dwarapu",
+          "https://twitter.com/avinashbot",
+          "https://www.reddit.com/user/Mustermind"
+        ]
+      }
+    </script>
     <script>
+      function toggleReveal() {
+        if (document.documentElement.clientWidth < 960) return;
+        var revealed = document.documentElement.classList.toggle('page--revealed');
+        if (window.sessionStorage) window.sessionStorage.setItem('revealed', revealed ? 'y' : 'n');
+      }
+
       if (!window.sessionStorage || sessionStorage.getItem('revealed') !== 'y') {
         document.documentElement.classList.remove('page--revealed');
       }
@@ -25,8 +78,6 @@
     <![endif]-->
   </head>
   <body>
-    <div class="collapser"></div>
-
     <header class="card">
       <div class="reveal-button" aria-hidden="true">
         <div class="reveal-button__circle" onclick="toggleReveal();">
@@ -42,11 +93,9 @@
           <a href="https://cs.york.ac.uk">Computer Science</a> at
           <a href="https://york.ac.uk">the University of York</a>
           <br>
-
           <strong class="card__icon" title="email address" aria-label="email address">@</strong>
           <a href="mailto:avinash@dwarapu.me">avinash&#64;dwarapu&#46;me</a>
           <br>
-
           <strong class="card__icon" title="pgp key" aria-label="pgp key">&#x1f511;</strong>
           <a href="https://keybase.io/avinashd/key.asc"><code>668E 3AF6 F8A0 E0A4</code></a>
         </address>
@@ -95,59 +144,6 @@
       </section>
     </div>
 
-    <script>
-      window.toggleReveal = function toggleReveal() {
-        if (document.documentElement.clientWidth < 960) return;
-        var revealed = document.documentElement.classList.toggle('page--revealed');
-        if (window.sessionStorage) window.sessionStorage.setItem('revealed', revealed ? 'y' : 'n');
-      };
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": {
-          "@vocab": "http://schema.org/"
-        },
-        "@type": "Person",
-        "@id": "https://avinash.dwarapu.me",
-        "url": "https://avinash.dwarapu.me",
-        "email": "avinash@dwarapu.me",
-        "givenName": "Avinash",
-        "familyName": "Dwarapu",
-        "memberOf": {
-          "@type": "ProgramMembership",
-          "programName": "Computer Science",
-          "url": "https://cs.york.ac.uk/",
-          "hostingOrganization": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of York",
-            "url": "https://www.york.ac.uk/"
-          }
-        },
-        "@reverse": {
-          "author": [
-            {
-              "@type": "SoftwareSourceCode",
-              "name": "Redd",
-              "codeRepository": "https://github.com/avinashbot/redd",
-              "programmingLanguage": {"@type": "Language", "name": "Ruby"}
-            },
-            {
-              "@type": "SoftwareSourceCode",
-              "name": "satellite",
-              "codeRepository": "https://github.com/avinashbot/satellite",
-              "programmingLanguage": {"@type": "Language", "name": "Go"}
-            }
-          ]
-        },
-        "sameAs": [
-          "https://keybase.io/avinashd",
-          "https://github.com/avinashbot",
-          "https://facebook.com/avinash.dwarapu",
-          "https://twitter.com/avinashbot",
-          "https://www.reddit.com/user/Mustermind"
-        ]
-      }
-    </script>
+    <div class="collapser"></div>
   </body>
 </html>

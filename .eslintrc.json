@@ -1,5 +1,0 @@
-{
-  "extends": "airbnb-base/legacy",
-  "plugins": ["eslint-plugin-html"],
-  "rules": { "vars-on-top": "off" }
-}
