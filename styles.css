@@ -57,6 +57,12 @@ a {
   font-style: normal;
 }
 
+.card__icon {
+  display: inline-block;
+  min-width: 25px;
+  text-align: center;
+}
+
 /* Links */
 
 .links {
