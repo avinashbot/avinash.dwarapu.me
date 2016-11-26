@@ -60,7 +60,7 @@
     </script>
     <script>
       function toggleReveal() {
-        if (document.documentElement.clientWidth < 960) return;
+        if (window.innerWidth < 960) return;
         var revealed = document.documentElement.classList.toggle('page--revealed');
         if (window.sessionStorage) window.sessionStorage.setItem('revealed', revealed ? 'y' : 'n');
       }
@@ -91,7 +91,7 @@
         <address class="card__contact">
           <strong class="card__icon" title="studying" aria-label="studying">&#x1f393;</strong>
           <a href="https://cs.york.ac.uk">Computer Science</a> at
-          <a href="https://york.ac.uk">the University of York</a>
+          <a href="https://york.ac.uk">University of York</a>
           <br>
           <strong class="card__icon" title="email address" aria-label="email address">@</strong>
           <a href="mailto:avinash@dwarapu.me">avinash&#64;dwarapu&#46;me</a>
