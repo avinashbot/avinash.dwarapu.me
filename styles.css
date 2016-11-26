@@ -42,7 +42,7 @@ a {
 }
 
 .card__contents {
-  padding: 20px;
+  padding: 65px 20px;
   text-align: center;
 }
 
@@ -152,8 +152,7 @@ a {
   }
 
   .card__contents {
-    padding-top: 65px;
-    padding-right: 32px; /* to accommodate button */
+    padding: 65px 32px 20px 20px; /* 32px to accommodate button */
     text-align: left;
   }
 
