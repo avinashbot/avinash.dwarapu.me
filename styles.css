@@ -174,7 +174,7 @@ a {
     height: 64px;
 
     transition: all 0.1s ease-out;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5);
     background-color: #EB5B61;
     cursor: pointer;
 
@@ -186,12 +186,14 @@ a {
   }
 
   .reveal-button__circle:hover {
+    transform: scale(1.1);
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
   }
 
   .reveal-button__circle:active {
-    transform: scale(0.9);
     background-color: #ED6E72;
+    transform: scale(1.0);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.5);
   }
 
   .reveal-button__chevron {
