@@ -136,7 +136,7 @@ a {
 
     z-index: 1;
 
-    transition-property: top, left, width, height, box-shadow, border-radius;
+    transition-property: top, left, width, height, box-shadow, border-radius, transform;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.23, 1.0, 0.32, 1.0);
   }
@@ -149,6 +149,12 @@ a {
     background-color: transparent; /* since we're using the collaper */
     position: absolute;
     z-index: 2;
+    transition-property: transform;
+  }
+
+  .card, .collapser {
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.23, 1.0, 0.32, 1.0);
   }
 
   .card__contents {
@@ -213,6 +219,10 @@ a {
     left: 5%;
     width: 420px;
     height: 270px;
+  }
+
+  .page--revealed .card, .page--revealed .collapser {
+    transform: rotate(-5deg);
   }
 
   .links {
