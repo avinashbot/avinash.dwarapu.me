@@ -80,14 +80,13 @@ a {
 
 .links__title {
   margin: 0;
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .links__list {
   padding-left: 0;
   margin-left: 0;
   list-style: none;
-  font-size: 1.2em;
 }
 
 .links__item {
