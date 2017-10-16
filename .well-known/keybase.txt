@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/avinashd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://avinash.dwarapu.me
+  * I am avinashd (https://keybase.io/avinashd) on keybase.
+  * I have a public key ASDz9y-FxjfLdoE-QzxWF2lE89Xiu-zFKjyHyq-aVo6WZwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e9a83dcab05f833b64ae2131363b9fb8ca270d2eddc85eccf01861f3d765b9dc0a",
+      "host": "keybase.io",
+      "kid": "0120f3f72f85c637cb76813e433c56176944f3d5e2bbecc52a3c87caaf9a568e96670a",
+      "uid": "fc9ed85f0424cd6c972cd018bfeb9719",
+      "username": "avinashd"
+    },
+    "merkle_root": {
+      "ctime": 1508178711,
+      "hash": "b5ba49285620f95ff4473d13428a9846ea04d7364351033b4fe2079fbf568842b252bc24ced6cdb3ec1916610b7043ea0032ef729e60709ed5230d56af907b70",
+      "hash_meta": "4314c59303d1946c36522776fb37f95dcf7797834442923e76c69730fdb083f2",
+      "seqno": 1586201
+    },
+    "service": {
+      "hostname": "avinash.dwarapu.me",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.33"
+  },
+  "ctime": 1508178729,
+  "expire_in": 504576000,
+  "prev": "14502c98422b37290181385995dd930c56c51b5924705358e6a09837f5239657",
+  "seqno": 57,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8/cvhcY3y3aBPkM8VhdpRPPV4rvsxSo8h8qvmlaOlmcKp3BheWxvYWTFA0p7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZTlhODNkY2FiMDVmODMzYjY0YWUyMTMxMzYzYjlmYjhjYTI3MGQyZWRkYzg1ZWNjZjAxODYxZjNkNzY1YjlkYzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZjNmNzJmODVjNjM3Y2I3NjgxM2U0MzNjNTYxNzY5NDRmM2Q1ZTJiYmVjYzUyYTNjODdjYWFmOWE1NjhlOTY2NzBhIiwidWlkIjoiZmM5ZWQ4NWYwNDI0Y2Q2Yzk3MmNkMDE4YmZlYjk3MTkiLCJ1c2VybmFtZSI6ImF2aW5hc2hkIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA4MTc4NzExLCJoYXNoIjoiYjViYTQ5Mjg1NjIwZjk1ZmY0NDczZDEzNDI4YTk4NDZlYTA0ZDczNjQzNTEwMzNiNGZlMjA3OWZiZjU2ODg0MmIyNTJiYzI0Y2VkNmNkYjNlYzE5MTY2MTBiNzA0M2VhMDAzMmVmNzI5ZTYwNzA5ZWQ1MjMwZDU2YWY5MDdiNzAiLCJoYXNoX21ldGEiOiI0MzE0YzU5MzAzZDE5NDZjMzY1MjI3NzZmYjM3Zjk1ZGNmNzc5NzgzNDQ0MjkyM2U3NmM2OTczMGZkYjA4M2YyIiwic2Vxbm8iOjE1ODYyMDF9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYXZpbmFzaC5kd2FyYXB1Lm1lIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zMyJ9LCJjdGltZSI6MTUwODE3ODcyOSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiIxNDUwMmM5ODQyMmIzNzI5MDE4MTM4NTk5NWRkOTMwYzU2YzUxYjU5MjQ3MDUzNThlNmEwOTgzN2Y1MjM5NjU3Iiwic2Vxbm8iOjU3LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQDP0NZfIZYngcicdNUIBSGAQlcnl25NUDEs2Um4FbWw6t30dPMa3C5mTaNJTIVJrTaDngQ2kReP8iQrnLpyJSwyoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAta+OjWwT0oebL6T0Ls8+/dOtmne/XDjwUqHKSGSD7oqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/avinashd
+
+==================================================================
