@@ -1,0 +1,24 @@
+{
+  "name": "avinash.dwarapu.me",
+  "version": "0.1.0",
+  "description": "My personal website.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "gatsby develop",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avinashbot/avinash.dwarapu.me.git"
+  },
+  "author": "Avinash Dwarapu <avinash@dwarapu.me>",
+  "license": "UNLICENSED",
+  "homepage": "https://avinash.dwarapu.me",
+  "dependencies": {
+    "gatsby-cli": "^1.1.10"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
