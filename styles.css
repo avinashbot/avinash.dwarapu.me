@@ -6,9 +6,9 @@ html, body {
 
 body {
   min-width: 200px;
-  background: #ED6A5A;
+  background: #444444;
   font-family: "Arimo", Tahoma, sans-serif;
-  color: #111;
+  color: #eeeeee;
 }
 
 h1, h2 {
@@ -17,8 +17,8 @@ h1, h2 {
 
 a {
   text-decoration: none;
-  color: #111; /* color:inherit not supported on IE */
-  border-bottom: 1px dashed #111;
+  border-bottom: 1px dashed #eeeeee;
+  color: #eeeeee;
 }
 
 .card__icon, .reveal-button {
@@ -44,6 +44,12 @@ a {
 .card__contents {
   padding: 65px 20px;
   text-align: center;
+  color: #111111;
+}
+
+.card__contents a {
+  color: #e8494e;
+  border-color: #e8494e;
 }
 
 .card__name {
@@ -81,6 +87,7 @@ a {
 .links__title {
   margin: 0;
   font-size: 1.4em;
+  color: #aaa;
 }
 
 .links__list {
@@ -103,7 +110,7 @@ a {
 }
 
 .links__languages {
-  color: #2c2c2c;
+  color: #aaaaaa;
   font-weight: lighter;
 }
 
@@ -130,8 +137,8 @@ a {
     height: 100%;
 
     display: block;
-    background-color: #E6EBE0;
-    box-shadow: 0 10px 6px -6px #444;
+    background-color: #e1e3dc;
+    box-shadow: 0 10px 6px -6px #000000;
 
     z-index: 1;
 
