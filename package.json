@@ -17,11 +17,14 @@
   "license": "UNLICENSED",
   "homepage": "https://avinash.dwarapu.me",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gatsby": "^1.9.69",
     "gatsby-cli": "^1.1.10",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^1.0.12"
+    "gatsby-plugin-sass": "^1.0.12",
+    "lodash": "^4.17.4",
+    "long": "^3.2.0"
   },
   "devDependencies": {
     "standard": "^10.0.3"
