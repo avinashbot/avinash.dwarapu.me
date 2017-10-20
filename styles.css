@@ -101,10 +101,8 @@ a {
 }
 
 .content__section {
-  display: inline-block;
   margin-bottom: 20px;
   padding-top: 5px;
-  width: 146.6px; /* [ 500 (width) - 20 (padding-right) - 20*2 (gutters) ] / 3 */
   vertical-align: top;
   text-align: left;
   line-height: 1.8;
@@ -112,7 +110,7 @@ a {
 
 .content__title {
   margin: 0 0 10px 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #eeeeee;
   line-height: 1.2;
 }
@@ -144,16 +142,10 @@ a {
 
 /* Mobile Separator (for links columns) */
 
-.mobile-separator {
-  display: block;
-}
-
 @media (min-width: 640px) {
-  .mobile-separator {
-    display: none;
-  }
-  
   .content__section {
+    display: inline-block;
+    width: 146.6px; /* [ 500 (width) - 20 (padding-right) - 20*2 (gutters) ] / 3 */
     margin-right: 20px;
   }
   
