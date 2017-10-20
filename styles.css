@@ -102,7 +102,6 @@ a {
 
 .content__section {
   display: inline-block;
-  margin-right: 20px;
   padding-top: 5px;
   min-width: 125px;
   max-width: 200px;
@@ -153,6 +152,14 @@ a {
 @media (min-width: 640px) {
   .mobile-separator {
     display: none;
+  }
+  
+  .content__section {
+    margin-right: 20px;
+  }
+  
+  .content__section:last-of-type {
+    margin-right: 0;
   }
 }
 
