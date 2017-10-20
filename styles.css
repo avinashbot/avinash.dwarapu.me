@@ -41,7 +41,7 @@ a {
 /* Card */
 
 .card {
-  background-color: #E6EBE0;
+  background-color: #E1E3DC;
 }
 
 .card__contents {
@@ -168,7 +168,7 @@ a {
     height: 100%;
 
     display: block;
-    background-color: #e1e3dc;
+    background-color: #E1E3DC;
     box-shadow: 0 10px 6px -6px #000000;
 
     z-index: 1;
@@ -278,6 +278,6 @@ a {
   }
 
   .content__section {
-    border-top: 2px solid #E6EBE0;
+    border-top: 2px solid #E1E3DC;
   }
 }
