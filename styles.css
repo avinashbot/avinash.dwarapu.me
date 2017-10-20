@@ -12,13 +12,17 @@ html, body {
 
 body {
   background: #6b004c;
-  font-family: "Arimo", Tahoma, sans-serif;
+  font-family: "Open Sans", Tahoma, sans-serif;
   color: #eeeeee;
 }
 
 h1, h2 {
   font-family: "Space Mono", Tahoma, sans-serif;
   font-weight: 200;
+}
+
+code {
+  font-family: "Space Mono", "Consolas", monospace;
 }
 
 a {
@@ -78,14 +82,16 @@ a {
 /* Links */
 
 .content {
-  text-align: center;
+  margin: 0 auto;
   padding: 20px;
+  max-width: 500px;
+  text-align: center;
 }
 
 .content__blurb {
   margin: 0 auto;
   font-family: "Space Mono", Tahoma, sans-serif;
-  line-height: 1.9em;
+  line-height: 1.9;
   text-align: left;
   max-width: 600px;
 }
@@ -97,20 +103,17 @@ a {
 .content__blurb em {
   font-style: normal;
   background-color: #9b2583;
-  padding: 2px;
+  padding: 3px;
 }
 
 .content__section {
   display: inline-block;
+  margin-bottom: 20px;
   padding-top: 5px;
-  min-width: 125px;
-  max-width: 200px;
+  width: 146.6px; /* [ 500 (width) - 20 (padding-right) - 20*2 (gutters) ] / 3 */
   vertical-align: top;
   text-align: left;
-}
-
-.content__section p {
-  line-height: 1.8em;
+  line-height: 1.8;
 }
 
 .content__title {
@@ -120,13 +123,13 @@ a {
 }
 
 .content__list {
-  padding-left: 0;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .content__item {
-  margin-bottom: 10px;
+  display: inline;
 }
 
 .content__item::after {
@@ -285,7 +288,6 @@ a {
     padding: 0;
     font-size: 1.2em;
     max-width: 500px;
-    text-align: justify;
   }
 
   .content__section {
