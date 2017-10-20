@@ -1,9 +1,3 @@
-/* Utility classes */
-
-.nobr {
-  white-space: nowrap;
-}
-
 /* Global Styles */
 
 html, body {
@@ -130,6 +124,7 @@ a {
 
 .content__item {
   display: inline;
+  white-space: nowrap;
 }
 
 .content__item::after {
