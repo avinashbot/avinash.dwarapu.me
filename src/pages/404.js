@@ -1,12 +1,30 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import 'typeface-open-sans'
 
-const NotFound = () => (
-  <div>
-    <h1>Four Zero Four</h1>
-    <p>Looks like you hit a non-existent or removed page. Sorry about that.</p>
-    <p><Link to='/'>Go Back?</Link></p>
-  </div>
-)
+const Container = styled.div`
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 500px;
+  font-family: "Open Sans", Tahoma, Helvetica, sans-serif;
+`
 
-export default NotFound
+class NotFoundPage extends Component {
+  componentDidMount () {
+    setTimeout(() => { window.location = '/' }, 10000)
+  }
+
+  render () {
+    return (
+      <Container>
+        <h1>This page doesn&#8217;t exist.</h1>
+        <p>
+          <a href='/'>Go back?</a>
+          <span> (Going back in 10 seconds...)</span>
+        </p>
+      </Container>
+    )
+  }
+}
+
+export default NotFoundPage

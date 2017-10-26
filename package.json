@@ -1,32 +1,33 @@
 {
   "name": "avinash.dwarapu.me",
-  "version": "1.0.0",
-  "description": "My personal website.",
   "private": true,
-  "main": "index.js",
-  "scripts": {
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "test": "standard"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/avinashbot/avinash.dwarapu.me.git"
-  },
+  "description": "My personal webpage",
+  "version": "1.0.0",
   "author": "Avinash Dwarapu <avinash@dwarapu.me>",
-  "license": "UNLICENSED",
-  "homepage": "https://avinash.dwarapu.me",
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "gatsby": "^1.9.69",
-    "gatsby-cli": "^1.1.10",
-    "gatsby-link": "^1.6.21",
+    "gatsby": "^1.9.73",
+    "gatsby-cli": "^1.1.11",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^1.0.12",
-    "lodash": "^4.17.4",
-    "long": "^3.2.0"
+    "normalize.css": "^7.0.0",
+    "typeface-open-sans": "0.0.35",
+    "typeface-space-mono": "0.0.40"
+  },
+  "license": "MIT",
+  "main": "gatsby-config.js",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "test": "eslint src"
   },
   "devDependencies": {
-    "standard": "^10.0.3"
+    "eslint": "^4.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gatsby-plugin-styled-components": "^1.0.5",
+    "js-cookie": "^2.1.4"
   }
 }

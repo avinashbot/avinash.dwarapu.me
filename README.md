@@ -1,1 +1,1 @@
-My personal website, [*avinash.dwarapu.me*](https://avinash.dwarapu.me).
+My personal webpage, [avinash.dwarapu.me](https://avinash.dwarapu.me).
