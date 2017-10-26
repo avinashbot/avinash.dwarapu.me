@@ -69,12 +69,13 @@ const CardContents = styled.div`
 const TitleName = styled.h1`
   margin: 0;
   font-size: 2em;
+  font-weight: normal;
   font-family: "Space Mono", Tahoma, Helvetica, sans-serif;
 `
 
 const Link = styled.a`
-  color: #e8494e;
-  border-bottom: 2px dotted #e8494e;
+  color: #e0161d;
+  border-bottom: 2px dotted #e0161d;
   text-decoration: none;
 `
 
@@ -152,15 +153,15 @@ const Card = ({ pageRevealed, toggleReveal }) => (
         <TitleName>Avinash Dwarapu</TitleName>
         <ContactDetails>
           <div>
-            <CardIcon title='studying' aria-label='studying'>&#x1f393;</CardIcon>
+            <CardIcon title='studying' aria-label='studying'>&#x1f393;</CardIcon>{' '}
             <Link href='https://cs.york.ac.uk'>Computer Science</Link> at <Link href='https://york.ac.uk'>University of York</Link>
           </div>
           <div>
-            <CardIcon title='email address' aria-label='email address'>@</CardIcon>
+            <CardIcon title='email address' aria-label='email address'>@</CardIcon>{' '}
             <Link href='mailto:avinash@dwarapu.me'>avinash&#64;dwarapu&#46;me</Link>
           </div>
           <div>
-            <CardIcon title='pgp key' aria-label='pgp key'>&#x1f511;</CardIcon>
+            <CardIcon title='pgp key' aria-label='pgp key'>&#x1f511;</CardIcon>{' '}
             <Link href='https://keybase.io/avinashd/key.asc'><Code>EEB3 026E A478 7776</Code></Link>
           </div>
         </ContactDetails>

@@ -43,7 +43,10 @@ class IndexPage extends Component {
   render () {
     return (
       <PageWrapper>
-        <Helmet><title>Avinash Dwarapu // Hello!</title></Helmet>
+        <Helmet>
+          <title>Avinash Dwarapu // Hello!</title>
+          <meta name='theme-color' value='#6b004c' />
+        </Helmet>
         <Card pageRevealed={this.state.pageRevealed} toggleReveal={() => this.toggleReveal()} />
         <MainContent />
       </PageWrapper>
