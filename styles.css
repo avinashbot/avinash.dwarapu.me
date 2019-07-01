@@ -118,20 +118,11 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  line-height: 1.9;
 }
 
 .content__item {
-  display: inline;
   white-space: nowrap;
-}
-
-.content__item::after {
-  font-weight: bolder;
-  content: ",";
-}
-
-.content__item:last-of-type::after {
-  content: "";
 }
 
 .content__languages {
@@ -280,4 +271,18 @@ a {
   .content__section {
     border-top: 2px solid #E1E3DC;
   }
+
+  .content__item {
+    display: inline;
+    white-space: nowrap;
+  }
+  
+  .content__item::after {
+    font-weight: bolder;
+    content: ",";
+  }
+  
+  .content__item:last-of-type::after {
+    content: "";
+  }  
 }
