@@ -51,8 +51,8 @@ a {
 }
 
 .card__contents a {
-  color: #e8494e;
-  border-color: #e8494e;
+  color: #c3181e;
+  border-color: #c3181e;
 }
 
 .card__name {
@@ -195,7 +195,7 @@ a {
   }
 
   .card__contents {
-    padding: 60px 32px 20px 20px; /* 32px to accommodate button */
+    padding: 52px 32px 20px 20px; /* 32px to accommodate button */
     text-align: left;
   }
 
