@@ -1,182 +1,53 @@
 <!doctype html>
-<html class="page page--revealed" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#6B004C">
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>I'm Avinash Dwarapu. Hello!</title>
-    <meta name="description" content="I'm Avinash Dwarapu. Check out my profiles and projects.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono&display=swap" type="text/css">
-    <link rel="stylesheet" href="styles.css" type="text/css">
+  <title>I'm Avinash Dwarapu. Hello!</title>
+  <meta name="description" content="The homepage of Avinash Dwarapu.">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 
-    <script type="application/ld+json">
-      {
-        "@context": {
-          "@vocab": "http://schema.org/"
-        },
-        "@type": "Person",
-        "@id": "https://avinash.dwarapu.me",
-        "url": "https://avinash.dwarapu.me",
-        "email": "avinash@dwarapu.me",
-        "givenName": "Avinash",
-        "familyName": "Dwarapu",
-        "memberOf": {
-          "@type": "ProgramMembership",
-          "programName": "Computer Science",
-          "url": "https://cs.york.ac.uk/",
-          "hostingOrganization": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of York",
-            "url": "https://www.york.ac.uk/"
-          }
-        },
-        "@reverse": {
-          "author": [
-            {
-              "@type": "SoftwareSourceCode",
-              "name": "Redd",
-              "codeRepository": "https://github.com/avinashbot/redd",
-              "programmingLanguage": {"@type": "Language", "name": "Ruby"}
-            },
-            {
-              "@type": "SoftwareSourceCode",
-              "name": "satellite",
-              "codeRepository": "https://github.com/avinashbot/satellite",
-              "programmingLanguage": {"@type": "Language", "name": "Go"}
-            },
-            {
-              "@type": "SoftwareSourceCode",
-              "name": "gamesearch",
-              "codeRepository": "https://github.com/avinashbot/gamesearch",
-              "programmingLanguage": {"@type": "Language", "name": "Haskell"}
-            }
-          ]
-        },
-        "sameAs": [
-          "https://keybase.io/avinashd",
-          "https://github.com/avinashbot",
-          "https://www.linkedin.com/in/avinashdwarapu",
-          "https://twitter.com/avinashbot"
-        ]
-      }
-    </script>
-    <script>
-      function toggleReveal() {
-        if (window.innerWidth < 960) return;
-        var revealed = document.documentElement.classList.toggle('page--revealed');
-        if (window.sessionStorage) window.sessionStorage.setItem('revealed', revealed ? 'y' : 'n');
-      }
+  <script type="application/ld+json">
+    {
+      "@context": {
+        "@vocab": "http://schema.org/"
+      },
+      "@type": "Person",
+      "@id": "https://avinash.dwarapu.me",
+      "url": "https://avinash.dwarapu.me",
+      "email": "avinash@dwarapu.me",
+      "givenName": "Avinash",
+      "familyName": "Dwarapu",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "AWS",
+        "url": "https://aws.amazon.com/"
+      },
+      "jobTitle": "Software Development Engineer",
+      "sameAs": [
+        "https://github.com/avinashbot",
+        "https://twitter.com/avinashbot"
+      ]
+    }
+  </script>
+</head>
+<body>
+  <p>
+    Hi! I'm Avinash Dwarapu.
+    
+    I'm a software developer at AWS working on the AWS Design System in Berlin.
+    
+    You can find me on
+    
+    <a href="https://github.com/avinashbot">GitHub</a>
+    
+    or <a href="https://twitter.com/avinashbot">Twitter</a>.
 
-      if (!window.sessionStorage || sessionStorage.getItem('revealed') !== 'y') {
-        document.documentElement.classList.remove('page--revealed');
-      }
-    </script>
+    Hit me up if you want to talk about JavaScript, video games, or coffee :)
 
-    <!--[if lt IE 9]>
-      <script>
-        var e = ['header', 'section'];
-        for (var i = 0; i < e.length; i++) document.createElement(e[i]);
-      </script>
-    <![endif]-->
-  </head>
-  <body>
-    <header class="card">
-      <div class="reveal-button" role="presentation">
-        <div class="reveal-button__circle" onclick="toggleReveal();">
-          <span class="reveal-button__chevron">&laquo;</span>
-        </div>
-      </div>
-
-      <div class="card__contents">
-        <h1 class="card__name">Avinash Dwarapu</h1>
-        <address class="card__contact">
-          <strong class="card__icon" title="working at" aria-label="working at">&#x1f3e2;</strong>
-          Software Developer Intern at <a href="https://www.aboutamazon.eu">Amazon</a>
-          <br>
-
-          <strong class="card__icon" title="graduated from" aria-label="graduated from">&#x1f393;</strong>
-          <a href="https://cs.york.ac.uk">Computer Science</a> at
-          <a href="https://york.ac.uk">University of York</a>
-          <br>
-          
-          <strong class="card__icon" title="email address" aria-label="email address">@</strong>
-          <a href="mailto:avinash@dwarapu.me">avinash&#64;dwarapu&#46;me</a>
-          <br>
-          
-          <strong class="card__icon" title="pgp key" aria-label="pgp key">&#x1f511;</strong>
-          <a href="https://keybase.io/avinashd/key.asc"><code>EEB3 026E A478 7776</code></a>
-        </address>
-      </div>
-    </header>
-
-    <div class="content">
-      <div class="content__blurb">
-        <p>
-          Hello there! I'm currently working as a software development intern at Amazon EU.
-          You can find my projects on my <em><a href="https://github.com/avinashbot">GitHub profile</a></em>.
-        </p>
-
-        <p>
-          I've worked on all kinds of things in the past,
-          from <em>frontend</em> design (with ESNext &amp; React)
-          to <em>backend</em> development (using all kinds of languages) and
-          <em>serverless</em> and service-oriented architecures (on AWS).
-          My other interests include <em>DevOps</em> and <em>UX design</em>.
-        </p>
-
-        <p>
-          Most days, you can reach me with <a href="mailto:avinash@dwarapu.me">good ol' email</a>,
-          but you can find me <a href="https://keybase.io/avinashd">in other places too</a>.
-        </p>
-      </div>
-
-      <section class="content__section">
-        <h2 class="content__title">profiles</h2>
-        <ul class="content__list">
-          <li class="content__item"><a href="https://keybase.io/avinashd">keybase</a></li>
-          <li class="content__item"><a href="https://github.com/avinashbot">github</a></li>
-          <li class="content__item"><a href="https://www.linkedin.com/in/avinashdwarapu">linkedin</a></li>
-          <li class="content__item"><a href="https://twitter.com/avinashbot">twitter</a></li>
-        </ul>
-      </section>
-
-      <section class="content__section">
-        <h2 class="content__title">projects</h2>
-        <ul class="content__list">
-          <li class="content__item">
-            <a href="https://github.com/avinashbot/satellite">satellite</a>
-            <span class="content__languages">(go)</span>
-          </li>
-          <li class="content__item">
-            <a href="https://github.com/avinashbot/redd">redd</a>
-            <span class="content__languages">(ruby)</span>
-          </li>
-          <li class="content__item">
-            <a href="https://github.com/avinashbot/gamesearch">gamesearch</a>
-            <span class="content__languages">(haskell)</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="content__section">
-        <h2 class="content__title">favourite things</h2>
-        <ul class="content__list">
-          <li class="content__item">Ruby</li>
-          <li class="content__item">Go</li>
-          <li class="content__item">Python</li>
-          <li class="content__item">HTML/CSS</li>
-          <li class="content__item">Javascript (ES6/JSX)</li>
-          <li class="content__item">Rust</li>
-          <li class="content__item">Kotlin</li>
-          <li class="content__item">Java</li>
-          <li class="content__item">Haskell</li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="collapser"></div>
-  </body>
+  </p>
+</body>
 </html>
